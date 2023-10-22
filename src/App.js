@@ -1,23 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import { SummaryItem, SummaryPie } from "./components";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="rowItem">
+        <SummaryPie
+          label="Type of Vehicle"
+          chartData={[
+            { label: "truck", value: 80 },
+            { label: "bus", value: 120 },
+            { label: "car", value: 120 },
+          ]}
+        />
+        <SummaryPie
+          label="Commercial/Non-commercial"
+          chartData={[
+            { label: "commercial", value: 80 },
+            { label: "non-commercial", value: 120 },
+          ]}
+        />
+      </div>
+      <div className="rowItem">
+        <SummaryItem label="Total Vehicle" value={1} />
+        <SummaryItem label="Average Speed" value={1} />
+      </div>
+      <div className="rowItem">
+        <SummaryItem
+          label="Total Car Entry"
+          description="in last minute"
+          value={1}
+        />
+        <SummaryItem
+          label="Total Car Exit"
+          description="in last minute"
+          value={1}
+        />
+      </div>
+      <div className="rowItem">
+        <SummaryItem
+          label="Total Car Entry"
+          description="in rush hour"
+          value={1}
+        />
+        <SummaryItem
+          label="Total Car Exit"
+          description="in rush hour"
+          value={1}
+        />
+      </div>
     </div>
   );
 }
