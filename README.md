@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `json-server --watch database/highways.json --port 3500 --routes database/routes.json` to run the simple json server host
+
+The API calls would be trigger 2 times at the mount phase of React since there is StrictMode in React 18
