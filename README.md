@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `json-server --watch database/highways.json --port 3500 --routes database/routes.json` to run the simple json server host
 
 The API calls would be trigger 2 times at the mount phase of React since there is StrictMode in React 18
+You could remove the tag <React.StrictMode> or change the mode to production env to disabled this inconvenient feature.
